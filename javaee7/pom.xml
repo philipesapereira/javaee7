@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.philipe</groupId>
+	<artifactId>javaee7</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.compiler.plugin>3.8.0</version.compiler.plugin>
+		<version.ear.plugin>3.0.1</version.ear.plugin>
+		<version.ejb.plugin>3.0.1</version.ejb.plugin>
+		<version.war.plugin>3.2.2</version.war.plugin>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+	<modules>
+		<module>javaee7-web</module>
+		<module>javaee7-ejb</module>
+		<module>javaee7-ear</module>
+	</modules>
+	
+	<build>
+		<finalName>${project.artifactId}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
+    <dependencyManagement>
+    	<dependencies>
+    		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+			<dependency>
+			    <groupId>javax</groupId>
+			    <artifactId>javaee-api</artifactId>
+			    <version>7.0</version>
+			    <scope>provided</scope>
+			</dependency>
+    	</dependencies>
+    </dependencyManagement>
+    
+</project>
