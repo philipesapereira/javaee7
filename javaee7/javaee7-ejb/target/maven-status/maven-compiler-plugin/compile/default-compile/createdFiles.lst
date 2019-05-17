@@ -1,5 +1,5 @@
-br\com\philipe\SubServico2.class
-br\com\philipe\TesteService.class
-br\com\philipe\ISubServico.class
-br\com\philipe\SubServico.class
-br\com\philipe\ITesteService.class
+br/com/philipe/TesteService.class
+br/com/philipe/SubServico.class
+br/com/philipe/ITesteService.class
+br/com/philipe/ISubServico.class
+br/com/philipe/SubServico2.class
